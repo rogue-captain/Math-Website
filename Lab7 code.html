@@ -1,0 +1,58 @@
+   
+   function generateNewProblem() {
+     //DEBUGGING LINE ----------------------------------------------------------------------------------------->
+	alert("generateNewProblem() executed.)
+	
+	
+    // Clear the form
+    document.getElementById('answer').value = '';
+    document.getElementById('result').innerText = '';
+
+    // Generate a new problem
+    var difficulty = document.getElementById('difficulty').value;
+    var problem = generateProblem(difficulty);
+
+    // Update the display with the new problem
+    document.getElementById('problem').innerText = problem.text + ' =';
+}
+	
+	
+	function checkAnswer(answer) {
+	
+      var userAnswer = parseInt(document.getElementById('answer').value);
+	  var problem = document.getElementById('problem').innerText;
+      var resultElement = document.getElementById('result');  	
+	
+	//DEBUGGING LINE ----------------------------------------------------------------------------------------->  
+	alert(" function checkAnswer() called. userAnswer:" + userAnswer);
+    alert("answer:" + answer);
+	//DEBUGGING LINE ----------------------------------------------------------------------------------------->
+	
+      if (!isNaN(userAnswer)) {
+
+        if (userAnswer === answer) {
+          resultElement.innerText = 'Correct!';
+		  
+      //var newProblem = generateProblem('easy');
+      //document.getElementById('problem').innerText = newProblem.text + ' =';		  
+
+        } else {
+          resultElement.innerText = 'Incorrect. Try again. userAnswer = ' + userAnswer + ' answer = ' + answer ;
+
+        }
+      } else {
+        alert('Please enter a valid number.');
+      }
+    }
+
+    document.getElementById('difficulty').addEventListener('change', function() {
+      var difficulty = this.value;
+      var problem = generateProblem(difficulty);
+      document.getElementById('problem').innerText = problem.text + ' =';
+      document.getElementById('answer').value = '';
+      document.getElementById('result').innerText = '';
+    });
+
+    // Initialize with easy difficulty
+    var initialProblem = generateProblem('easy');
+    document.getElementById('problem').innerText = initialProblem.text + ' =';
