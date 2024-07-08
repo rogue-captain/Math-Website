@@ -1,4 +1,4 @@
-<script>
+
   
 var answer 
 
@@ -86,4 +86,3 @@ if (!isNaN(userAnswer)) {
   //var initialProblem = generateProblem('easy');
   document.getElementById('problem').innerText = generateProblem('easy').text + ' =';
   
-</script>
