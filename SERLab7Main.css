@@ -1,11 +1,16 @@
     header {
-			width: 90%; 
-		background: white;
+	  width: 60vw; 
+	  background: rgba(240, 240, 240, 0.8);
 	  padding: 20px;
 	  margin: 0 auto;
 	  text-align: center;
-		
+	  font-family:Verdana, Geneva, Tahoma, sans-serif;
+	  border-radius: 50%;	
 	}
+
+	header:hover {
+		background-color: blueviolet;
+	} 
 	
 	
 	body {
@@ -13,10 +18,11 @@
 	  background-image: url('math-background.jpg'); 
 	  background-size: cover; 
 	  background-repeat: no-repeat; 
+	  background-position: center center;
+      background-attachment: fixed;
 	  padding: 20px;
 	  margin: 0 auto;
 	  text-align: center;
-	  
     }
 	
 	#Main-Problem {
