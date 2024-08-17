@@ -1,6 +1,5 @@
 
-  
-var answer 
+  var answer 
 
 function generateProblem(difficulty) {
 
@@ -12,11 +11,11 @@ var problemText = `${operand1} ${operator} ${operand2}`;
 answer = eval(problemText);  
 
 //DEBUGGING LINE ----------------------------------------------------------------------------------------->
-  alert("generateProblem() executed. answer = " + answer)
+//  alert("generateProblem() executed. answer = " + answer)
 
 //DEBUGGING LINE ----------------------------------------------------------------------------------------->
   var resultElement = document.getElementById('result');
-resultElement.innerText = 'Answer = ' + answer;
+// resultElement.innerText = 'Answer = ' + answer;
  //DEBUGGING LINE ----------------------------------------------------------------------------------------->
 
 return {
@@ -33,7 +32,7 @@ var userAnswer = parseInt(document.getElementById('answer').value);
 if (!isNaN(userAnswer)) {
 
   //DEBUGGING LINE ----------------------------------------------------------------------------------------->
-  alert('checkAnswer() called: answer = ' + answer + ', userAnswer = ' + userAnswer);
+  //alert('checkAnswer() called: answer = ' + answer + ', userAnswer = ' + userAnswer);
   //DEBUGGING LINE ----------------------------------------------------------------------------------------->
   
   if (answer === userAnswer) {
