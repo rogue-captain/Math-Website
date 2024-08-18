@@ -29,7 +29,7 @@
 	#Main-Problem {
 		display: flex;
 		flex-direction: column;
-		justify-content:space-evenly;
+		justify-content:space-around;
 		align-items:center;
 		width: 90vw;
 		height: 20vh; 
@@ -43,6 +43,11 @@
 	#difficulty-container {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		margin-top: 6vh;
+		gap: 2px;
+		border: 2px solid black;
+
 	}
 	
 	#result {
@@ -64,7 +69,22 @@
 
 	#problem-container {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+		margin-bottom: 5vh;
+		justify-content: space-between;
+		gap: 2px;
+		border: 2px solid black;
+	}
+
+	#submit-button {
+		height: 4vh;
+		width: 10vw;
+	}
+
+	#newProblemButton {
+		margin-bottom: 3vh;
+		height: 4vh;
+		width: 10vw;
 	}
 	
     #submission {
