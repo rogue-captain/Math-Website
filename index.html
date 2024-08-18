@@ -21,6 +21,9 @@ This .
   
 	<link href="SERLab7Main.css" text="text/css" rel="stylesheet">
 
+	    <!-- Link to the external JavaScript file -->
+		<script src="Math7WebSiteDemoJS.js"> </script>
+
 </head>
 
 
@@ -35,6 +38,7 @@ This .
 <br>
 
 	<div id="Main-Problem">
+		<div id="difficulty-container">
 
 		  <label for="difficulty">Select Difficulty:</label>
 		  <select id="difficulty">
@@ -43,12 +47,16 @@ This .
 			<option value="challenging">Challenging</option>
 			
 		  </select>
+		</div> <!-- difficulty-container -->
 		  
-		  <div id="problem"></div>
+		<div id="problem-container">
+			<div id="problem"></div>
 		  
-		  <input type="text" id="answer" placeholder="Enter your answer">
-		  <button onclick="checkAnswer()"> Submit </button>
-		  
+			<input type="text" id="answer" placeholder="Enter your answer">
+			<button onclick="checkAnswer()"> Submit </button>
+			
+		</div>
+
 		  <div id="submission"></div>
 		  
 		  <button id="newProblemButton"> New Problem </button>
@@ -59,11 +67,6 @@ This .
 	
 	<div id="result">	
 	</div> <!-- result -->
-
-
-
-    <!-- Link to the external JavaScript file -->
-    <script src="Math7WebSiteDemoJS.js"> </script>
 
 
   
