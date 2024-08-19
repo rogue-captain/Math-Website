@@ -18,21 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
   }
 
-  function checkAnswer() {
-      var userAnswer = parseInt(document.getElementById('answer').value);
 
-      if (!isNaN(userAnswer)) {
-          console.log('checkAnswer() called: answer =', answer, ', userAnswer =', userAnswer);
-          
-          if (answer === userAnswer) {
-              document.getElementById('result').innerText = "CORRECT !!!";
-          } else {
-              document.getElementById('result').innerText = "Incorrect Answer. Try Again.";
-          }
-      } else {
-          alert("Please enter a number into the textbox.");
-      }
-  }
 
   // Initialize with easy difficulty at form load
   var initialProblem = generateProblem('easy');
@@ -56,3 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('result').innerText = '';
   });
 });
+
+function checkAnswer() {
+  var userAnswer = parseInt(document.getElementById('answer').value);
+
+  if (!isNaN(userAnswer)) {
+      console.log('checkAnswer() called: answer =', answer, ', userAnswer =', userAnswer);
+      
+      if (answer === userAnswer) {
+          document.getElementById('result').innerText = "CORRECT !!!";
+      } else {
+          document.getElementById('result').innerText = "Incorrect Answer. Try Again.";
+      }
+  } else {
+      alert("Please enter a number into the textbox.");
+  }
+}
