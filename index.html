@@ -40,7 +40,7 @@ This .
 	<div id="Main-Problem">
 		<div id="difficulty-container">
 
-		  <label for="difficulty">Select Difficulty:</label>
+		  <label id="difficulty-label" for="difficulty">Select Difficulty:</label>
 		  <select id="difficulty">
 		  
 			<option value="easy">Easy</option>
@@ -54,12 +54,10 @@ This .
 		  
 			<input type="text" id="answer" placeholder="Enter your answer">
 			<button id="submit-button" onclick="checkAnswer()"> Submit </button>
-
-			<button id="newProblemButton"> New Problem </button>
 			
 		</div>
 
-		
+		<button id="newProblemButton"> New Problem </button>
 
 		  <div id="submission"></div>
 	  
